@@ -1,0 +1,48 @@
+@media screen and (max-width: 768px) {
+  .app {
+    grid-template-columns: 0 100% 0;
+  }
+
+  .header {
+    font-size: larger;
+  }
+
+  .status {
+    font-size: small;
+  }
+
+  .btnSecondary {
+    width: 30%;
+  }
+
+  .iconFlag,
+  .iconTrophy,
+  .iconStar,
+  .iconFlagTriangle,
+  .iconRotate {
+    height: 16px;
+    width: 16px;
+  }
+
+  img {
+    width: auto;
+    height: 50%;
+  }
+
+  .qatar {
+    width: 80%;
+    height: auto;
+  }
+
+  .options {
+    grid-template-columns: 1fr;
+  }
+
+  .options.easy button {
+    height: 50%;
+  }
+
+  .options.hard button {
+    height: 80%;
+  }
+}
