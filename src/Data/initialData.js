@@ -740,7 +740,7 @@ const initialCountryData = [
   //     countryCode: "uz",
   //   },
   {
-    countryName: "Holy See",
+    countryName: "Holy See (Vatican City)",
     countryCode: "va",
   },
   {
