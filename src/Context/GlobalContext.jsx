@@ -18,6 +18,7 @@ const initialState = {
   isLoading: true,
   isEnd: false,
   highscore: 0,
+  isNewHighscore: false,
 };
 
 const reducer = (state, action) => {
@@ -49,11 +50,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         gameMode: state.gameMode === "easy" ? "hard" : "easy",
-        isLoading: true,
       };
     case "restartClicked":
       return {
         ...initialState,
+        gameMode: state.gameMode,
         highscore: state.highscore,
         restart: true,
       };
@@ -63,6 +64,7 @@ const reducer = (state, action) => {
         isEnd: true,
         highscore:
           state.points > state.highscore ? state.points : state.highscore,
+        isNewHighscore: state.points > state.highscore,
       };
     default:
       throw new Error("Action unknown");
@@ -84,6 +86,7 @@ function GlobalProvider({ children }) {
       isLoading,
       isEnd,
       highscore,
+      isNewHighscore,
     },
     dispatch,
   ] = useReducer(reducer, initialState);
@@ -155,6 +158,7 @@ function GlobalProvider({ children }) {
             isLoading,
             isEnd,
             highscore,
+            isNewHighscore,
           }}
         >
           {children}
@@ -173,15 +177,15 @@ function useGlobal() {
 
 export { GlobalProvider, useGlobal };
 
-//google analytics
-//react-cookie-consent
+//github init -------
+//tap highlight-------
+//image localstorage--------
+//landscape warning----------
+//icon file
 //lighthouse
 //remove unused codes
 //pwa
-//image localstorage
-//icon file
-//tap highlight
-//landscape warning
-//github init
-//domain
+//react-cookie-consent
 //netlify
+//domain
+//google analytics
