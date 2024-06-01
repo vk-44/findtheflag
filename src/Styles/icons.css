@@ -1,0 +1,37 @@
+:root {
+  --color-flagTriangleGreen: #38b000;
+  --color-flagTriangleRed: #d00000;
+  --color-star: #fcf300;
+  --color-flag: #1e96fc;
+  --color-trophy: #fca311;
+  --color-rotate: #111827;
+  --color-award: #6c2bd9;
+}
+
+.iconFlagTriangle.green {
+  color: var(--color-flagTriangleGreen);
+}
+
+.iconFlagTriangle.red {
+  color: var(--color-flagTriangleRed);
+}
+
+.iconStar {
+  color: var(--color-star);
+}
+
+.iconFlag {
+  color: var(--color-flag);
+}
+
+.iconTrophy {
+  color: var(--color-trophy);
+}
+
+.iconRotate {
+  color: var(--color-rotate);
+}
+
+.iconAward {
+  color: var(--color-award);
+}
