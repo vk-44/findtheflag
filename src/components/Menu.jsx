@@ -1,11 +1,20 @@
+import { useMemo } from "react";
 import { FlagTriangleRight } from "lucide-react";
 import { useGlobal } from "../Context/GlobalContext";
-import { useMemo } from "react";
+import {
+  iconStar,
+  iconFlag,
+  iconTrophy,
+  iconRotate,
+  iconPalette,
+} from "./Icons";
+import StatusItem from "./StatusItem";
 import SettingsItem from "./SettingsItem";
-import { iconRotate, iconPalette } from "./Icons";
 
-function Settings() {
-  const { dispatch, isEasyMode } = useGlobal();
+function Menu() {
+  const { points, count, countryDataLength, highscore, dispatch, isEasyMode } =
+    useGlobal();
+  const flagCount = count < countryDataLength ? count + 1 : count;
   const iconFlagTriangle = useMemo(
     () => (
       <FlagTriangleRight
@@ -14,9 +23,15 @@ function Settings() {
     ),
     [isEasyMode]
   );
-
   return (
-    <div className="settings">
+    <div className="menu">
+      <StatusItem icon={iconStar} description="Score" data={points} />
+      <StatusItem
+        icon={iconFlag}
+        description="Flags"
+        data={`${flagCount} / ${countryDataLength}`}
+      />
+      <StatusItem icon={iconTrophy} description="Highscore" data={highscore} />
       <SettingsItem
         icon={iconFlagTriangle}
         description={isEasyMode ? "Easy" : "Hard"}
@@ -27,16 +42,16 @@ function Settings() {
       />
       <SettingsItem
         icon={iconPalette}
-        description={"Theme"}
+        description="Theme"
         onClick={() => console.log("theme changed")}
       />
       <SettingsItem
         icon={iconRotate}
-        description={"Restart"}
+        description="Restart"
         onClick={() => dispatch({ type: "restartClicked" })}
       />
     </div>
   );
 }
 
-export default Settings;
+export default Menu;

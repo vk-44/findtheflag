@@ -21,16 +21,22 @@ function End() {
   }
 
   return (
-    <div className="end">
+    <div className="endContainer">
       <div className="endStatusContainer">
         <p className="title">
           <span>You earned the title</span> <b>{title}</b>
         </p>
-        <StatusItem icon={iconStar} description={"Score"} data={points} />
+        <StatusItem
+          icon={iconStar}
+          description="Score"
+          data={points}
+          className="end"
+        />
         <StatusItem
           icon={iconTrophy}
-          description={"Highscore"}
+          description="Highscore"
           data={highscore}
+          className="end"
         />
         {isNewHighscore && (
           <p className="descriptionContainer newHighScore">
@@ -40,9 +46,9 @@ function End() {
         )}
         <SettingsItem
           icon={iconRotate}
-          description={"Restart"}
+          description="Restart"
           onClick={() => dispatch({ type: "restartClicked" })}
-          className={"restart"}
+          className="restart"
         />
       </div>
     </div>

@@ -1,6 +1,6 @@
-function StatusItem({ icon, description, data }) {
+function StatusItem({ icon, description, data, className = "" }) {
   return (
-    <p className="descriptionContainer">
+    <p className={`descriptionContainer ${className}`}>
       {icon}
       <span>
         {description}: <b>{data}</b>

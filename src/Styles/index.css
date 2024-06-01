@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Mate+SC&display=swap");
 
-.default {
+:root {
   --color-darkest: #212529;
   --color-dark: #343a40;
   --color-medium: #495057;
@@ -168,24 +168,23 @@ body {
 
 .main {
   display: grid;
-  grid-template-rows: 5% 5% 55% 35%;
+  grid-template-rows: 10% 55% 35%;
   font-size: 1.8rem;
-  border-bottom: 1px solid var(--color-dark);
 }
 
-.status,
-.settings {
-  display: flex;
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   align-items: center;
-  justify-content: space-between;
-  padding: 0 20px 0 20px;
+  justify-items: center;
 }
 
 .descriptionContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 15%;
+  width: 50%;
   gap: 3px;
 }
 
@@ -231,6 +230,7 @@ img {
   align-items: center;
   justify-content: space-around;
   font-size: 1.5rem;
+  border-top: 1px solid var(--color-dark);
 }
 
 a {
@@ -238,7 +238,7 @@ a {
 }
 
 .loader,
-.end {
+.endContainer {
   font-size: 3rem;
   display: flex;
   align-items: center;
@@ -267,6 +267,11 @@ a {
   align-items: center;
   flex-direction: column;
 }
+
+.end {
+  width: 100% !important;
+}
+
 .restart {
   grid-row: 4/5;
   width: 30%;
