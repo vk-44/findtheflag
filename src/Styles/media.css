@@ -1,25 +1,47 @@
 @media screen and (max-width: 768px) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .btnMain {
+    font-size: 1.8rem;
+  }
+
+  .btnMain:hover {
+    background-color: var(--color-dark);
+  }
+
   .app {
     grid-template-columns: 0 100% 0;
   }
 
   .header {
-    font-size: larger;
+    font-size: 2rem;
+  }
+
+  .main {
+    grid-template-rows: 5% 5% 50% 40%;
   }
 
   .status {
-    font-size: small;
+    font-size: 1.5rem;
   }
 
-  .btnSecondary {
+  .descriptionContainer {
     width: 30%;
+  }
+
+  .endStatusContainer {
+    font-size: 1.8rem;
   }
 
   .iconFlag,
   .iconTrophy,
   .iconStar,
   .iconFlagTriangle,
-  .iconRotate {
+  .iconRotate,
+  .iconAward,
+  .iconPalette {
     height: 16px;
     width: 16px;
   }

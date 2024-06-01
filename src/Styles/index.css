@@ -1,17 +1,93 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Mate+SC&display=swap");
 
-/* :root {
-  --color-darkest: #343a40;
-  --color-dark: #495057;
-  --color-medium: #6c757d;
-  --color-light: #adb5bd;
-} */
-
-:root {
+.default {
   --color-darkest: #212529;
   --color-dark: #343a40;
   --color-medium: #495057;
   --color-light: #adb5bd;
+  --color-correct: #38b000;
+  --color-wrong: #d00000;
+}
+
+.slate {
+  --color-darkest: #0f172a;
+  --color-dark: #1e293b;
+  --color-medium: #334155;
+  --color-light: #64748b;
+  --color-correct: #38b000;
+  --color-wrong: #d00000;
+}
+
+.gray {
+  --color-darkest: #111827;
+  --color-dark: #1f2937;
+  --color-medium: #374151;
+  --color-light: #6b7280;
+  --color-correct: #38b000;
+  --color-wrong: #d00000;
+}
+
+.zinc {
+  --color-darkest: #18181b;
+  --color-dark: #27272a;
+  --color-medium: #3f3f46;
+  --color-light: #71717a;
+  --color-correct: #38b000;
+  --color-wrong: #d00000;
+}
+
+.neutral {
+  --color-darkest: #171717;
+  --color-dark: #262626;
+  --color-medium: #404040;
+  --color-light: #737373;
+  --color-correct: #38b000;
+  --color-wrong: #d00000;
+}
+
+.stone {
+  --color-darkest: #1c1917;
+  --color-dark: #292524;
+  --color-medium: #44403c;
+  --color-light: #78716c;
+  --color-correct: #38b000;
+  --color-wrong: #d00000;
+}
+
+.emerald {
+  --color-darkest: #064e3b;
+  --color-dark: #065f46;
+  --color-medium: #047857;
+  --color-light: #10b981;
+  --color-correct: #38b000;
+  --color-wrong: #d00000;
+}
+
+.teal {
+  --color-darkest: #134e4a;
+  --color-dark: #115e59;
+  --color-medium: #0f766e;
+  --color-light: #14b8a6;
+  --color-correct: #38b000;
+  --color-wrong: #d00000;
+}
+
+.cyan {
+  --color-darkest: #164e63;
+  --color-dark: #155e75;
+  --color-medium: #0e7490;
+  --color-light: #06b6d4;
+  --color-correct: #38b000;
+  --color-wrong: #d00000;
+}
+
+.sky {
+  --color-darkest: #0c4a6e;
+  --color-dark: #075985;
+  --color-medium: #0369a1;
+  --color-light: #0ea5e9;
+  --color-correct: #38b000;
+  --color-wrong: #d00000;
 }
 
 * {
@@ -20,8 +96,12 @@
   box-sizing: border-box;
 }
 
-body {
+html {
+  font-size: 62.5%;
   font-family: "Mate SC", serif;
+}
+
+body {
   overscroll-behavior: none;
   color: var(--color-light);
   background-color: var(--color-darkest);
@@ -34,7 +114,7 @@ body {
   border: 2px solid transparent;
   width: 80%;
   border-radius: 100px;
-  font-size: large;
+  font-size: 2rem;
   cursor: pointer;
 }
 
@@ -43,19 +123,19 @@ body {
 }
 
 .btnMain.correct {
-  border: 2px solid green;
+  border: 2px solid var(--color-correct);
 }
 
 .btnMain.wrong {
-  border: 2px solid red;
+  border: 2px solid var(--color-wrong);
 }
 
 .btnSecondary {
+  font-size: 1.5rem;
   color: var(--color-light);
   background-color: var(--color-dark);
   font-family: inherit;
   border: none;
-  width: 15%;
   height: 80%;
   border-radius: 100px;
   cursor: pointer;
@@ -79,7 +159,7 @@ body {
 
 .header {
   font-family: "Bungee Outline", sans-serif;
-  font-size: xx-large;
+  font-size: 3.5rem;
   color: var(--color-medium);
   display: flex;
   align-items: center;
@@ -89,6 +169,7 @@ body {
 .main {
   display: grid;
   grid-template-rows: 5% 5% 55% 35%;
+  font-size: 1.8rem;
   border-bottom: 1px solid var(--color-dark);
 }
 
@@ -100,35 +181,11 @@ body {
   padding: 0 20px 0 20px;
 }
 
-.iconFlagTriangle.green {
-  fill: green;
-  color: green;
-}
-
-.iconFlagTriangle.red {
-  fill: red;
-  color: red;
-}
-
-.iconStar {
-  fill: yellow;
-  color: yellow;
-}
-
-.iconFlag {
-  fill: #1e96fc;
-  color: #1e96fc;
-}
-
-.iconTrophy {
-  fill: #fca311;
-  color: #fca311;
-}
-
 .descriptionContainer {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 15%;
   gap: 3px;
 }
 
@@ -173,30 +230,16 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  font-size: 1.5rem;
 }
 
 a {
   color: var(--color-light);
 }
 
-/* .loader,
-.end {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.end {
-  width: 40%;
-  height: 40%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-} */
-
 .loader,
 .end {
+  font-size: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -206,14 +249,26 @@ a {
   display: grid;
   align-items: center;
   justify-items: center;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   width: 80%;
-  height: 30%;
+  height: 50%;
+  font-size: 2.5rem;
 }
 
+.title,
+.newHighScore,
 .restart {
   grid-column: 1/3;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.restart {
+  grid-row: 4/5;
   width: 30%;
   height: 50%;
 }
