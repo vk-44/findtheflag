@@ -10,10 +10,12 @@ import {
 } from "./Icons";
 import StatusItem from "./StatusItem";
 import SettingsItem from "./SettingsItem";
+import { useTheme } from "../Context/ThemeContext";
 
 function Menu() {
   const { points, count, countryDataLength, highscore, dispatch, isEasyMode } =
     useGlobal();
+  const { theme, handleTheme } = useTheme();
   const flagCount = count < countryDataLength ? count + 1 : count;
   const iconFlagTriangle = useMemo(
     () => (
@@ -42,8 +44,8 @@ function Menu() {
       />
       <SettingsItem
         icon={iconPalette}
-        description="Theme"
-        onClick={() => console.log("theme changed")}
+        description={theme}
+        onClick={handleTheme}
       />
       <SettingsItem
         icon={iconRotate}

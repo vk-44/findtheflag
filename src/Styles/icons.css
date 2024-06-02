@@ -4,8 +4,8 @@
   --color-star: #fcf300;
   --color-flag: #1e96fc;
   --color-trophy: #fca311;
-  --color-rotate: #111827;
-  --color-award: #6c2bd9;
+  --color-rotate: #add8e6;
+  --color-palette: #6c2bd9;
 }
 
 .iconFlagTriangle.green {
@@ -33,5 +33,9 @@
 }
 
 .iconAward {
-  color: var(--color-award);
+  color: var(--color-palette);
+}
+
+.iconPalette {
+  color: var(--color-palette);
 }
