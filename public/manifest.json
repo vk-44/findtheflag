@@ -1,0 +1,17 @@
+{
+  "short_name": "Find The Flag",
+  "name": "Find The Flag",
+  "description": "Simple flag finding game(quiz) where players are given a country flag and asked to choose the right answer from given options.",
+  "icons": [
+    {
+      "src": "/flag.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#212529",
+  "display": "standalone",
+  "theme_color": "#212529",
+  "orientation": "portrait"
+}

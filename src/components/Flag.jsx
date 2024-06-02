@@ -19,6 +19,8 @@ function Flag() {
           className={`${countryCode === "qa" ? "qatar" : ""} ${
             countryCode === "np" ? "nepal" : ""
           }`}
+          width={600}
+          height={400}
         />
       </AnimatePresence>
     </div>

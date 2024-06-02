@@ -176,16 +176,3 @@ function useGlobal() {
 }
 
 export { GlobalProvider, useGlobal };
-
-//github init -------
-//tap highlight-------
-//image localstorage--------
-//landscape warning----------
-//icon file
-//lighthouse
-//remove unused codes
-//pwa
-//react-cookie-consent
-//netlify
-//domain
-//google analytics
