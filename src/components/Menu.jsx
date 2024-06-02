@@ -30,7 +30,7 @@ function Menu() {
       <StatusItem icon={iconStar} description="Score" data={points} />
       <StatusItem
         icon={iconFlag}
-        description="Flags"
+        description="Flag"
         data={`${flagCount} / ${countryDataLength}`}
       />
       <StatusItem icon={iconTrophy} description="Highscore" data={highscore} />
