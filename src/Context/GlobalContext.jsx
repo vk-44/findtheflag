@@ -1,4 +1,10 @@
-import { createContext, useContext, useEffect, useReducer } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useReducer,
+  useRef,
+} from "react";
 import ArrayShuffler from "../lib/ArrayShuffler";
 import initialCountryData from "../Data/initialData";
 import RandomNumberGenerator from "../lib/RandomNumberGenerator";
@@ -94,7 +100,22 @@ function GlobalProvider({ children }) {
   const countryName = countryData[count]?.countryName;
   const previousCountryName = countryData[count - 1]?.countryName;
   const countryCode = countryData[count]?.countryCode;
+  const nextCountryCode = countryData[count + 1]?.countryCode;
   const isEasyMode = gameMode === "easy";
+  const initialRender = useRef(true);
+
+  const preloadImage = (code) => {
+    new Image().src = `CountryFlags/${code}.webp`;
+  };
+
+  useEffect(() => {
+    if (initialRender.current && countryCode) {
+      preloadImage(countryCode);
+      initialRender.current = false;
+    }
+
+    if (nextCountryCode) preloadImage(nextCountryCode);
+  }, [countryCode, nextCountryCode]);
 
   useEffect(() => {
     dispatch({
