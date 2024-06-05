@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { FlagTriangleRight } from "lucide-react";
 import { useGlobal } from "../Context/GlobalContext";
+import { useTheme } from "../Context/ThemeContext";
 import {
   iconStar,
   iconFlag,
@@ -10,7 +11,6 @@ import {
 } from "./Icons";
 import StatusItem from "./StatusItem";
 import SettingsItem from "./SettingsItem";
-import { useTheme } from "../Context/ThemeContext";
 
 function Menu() {
   const { points, count, countryDataLength, highscore, dispatch, isEasyMode } =

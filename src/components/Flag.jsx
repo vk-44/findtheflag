@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useGlobal } from "../Context/GlobalContext";
-import Loader from "../components/Loader";
 import { useLoader } from "../Hook/useLoader";
+import Loader from "../components/Loader";
 
 function Flag() {
   const { countryCode } = useGlobal();
